@@ -6,6 +6,7 @@ import com.rm.bean.entity.UsersEntity;
 
 public interface IUserService {
 
-	List<UsersEntity> findAll();
-	void save(UsersEntity user);
-}
+	UsersEntity save(UsersEntity user);
+	
+	public List<UsersEntity> findUserByEmail(String email);
+ }

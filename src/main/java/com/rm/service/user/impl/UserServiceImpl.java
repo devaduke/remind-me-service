@@ -16,14 +16,13 @@ public class UserServiceImpl implements IUserService {
 	private UserRepository userRepo = null;
 
 	@Override
-	public List<UsersEntity> findAll() {
-	  List cities = (List<UsersEntity>) userRepo.findAll();
-	  return cities;
+	public UsersEntity save(UsersEntity user) {
+	 return userRepo.save(user);
 	}
 	
 	@Override
-	public void save(UsersEntity user) {
-	  System.out.println(user);
-	  userRepo.save(user);
+	public List<UsersEntity> findUserByEmail(String email) {
+		
+	  return null;
 	}
 }
